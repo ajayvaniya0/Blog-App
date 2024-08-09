@@ -12,7 +12,7 @@ class BlogModel extends Blog {
   });
 
   Map<String, dynamic> toJson() {
-    return <String, dynamic> {
+    return <String, dynamic>{
       'id': id,
       'poster_id': posterId,
       'title': title,
@@ -33,7 +33,7 @@ class BlogModel extends Blog {
       topics: List<String>.from(map['topics'] ?? []),
       updatedAt: map['updated_at'] == null
           ? DateTime.now()
-          : DateTime.parse(map['updatedAt']),
+          : DateTime.parse(map['updated_at']),
     );
   }
 
