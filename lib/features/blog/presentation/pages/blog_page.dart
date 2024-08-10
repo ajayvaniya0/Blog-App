@@ -59,7 +59,9 @@ class _BlogPageState extends State<BlogPage> {
                 final blog = state.blogs[index];
                 return BlogCard(
                   blog: blog,
-                  color: AppPallete.gradient1,
+                  color: index % 2 == 0
+                      ? AppPallete.gradient1
+                      : AppPallete.gradient2,
                 );
               },
             );
